@@ -20,7 +20,7 @@
   description: "Tackle the open-vocabulary 3D instance segmentation by using both 3D point clouds and 2D multi-view images"
   project_page: "https://dualpath.github.io"
   # github: VinAIResearch/GaPro
-  arxiv: 2307.13251
+  arxiv: 2408.08591
   # video: "https://www.youtube.com/watch?v=uoOApyX-NUY"
   image: dualpath_demo.jpg
   # image_mouseover: isbnet_demo.jpg
