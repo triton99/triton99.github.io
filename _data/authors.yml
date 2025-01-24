@@ -1,0 +1,37 @@
+triton:
+  first_name: Tri
+  last_name: Ton
+  website: https://triton99.github.io/
+  is_me: true
+trungxpham:
+  first_name: Trung
+  last_name: X. Pham
+  website: https://trungpx.github.io/
+thanhnguyen:
+  first_name: Thanh
+  last_name: Nguyen
+  website: https://scholar.google.com/citations?user=mLaBO3kAAAAJ
+tungluu:
+  first_name: Tung
+  last_name: M Luu
+  website: https://scholar.google.com/citations?user=7N2JQW0AAAAJ
+jiwoohong:
+  first_name: Jiwoo
+  last_name: Hong
+  website: https://sanctusfactory.com/
+soohwan:
+  first_name: Soohwan
+  last_name: Eom
+  website: https://sanctusfactory.com/
+junyeop:
+  first_name: Jun
+  last_name: Yeop Shim
+  website: https://sanctusfactory.com/
+junyeong:
+  first_name: Junyeong
+  last_name: Kim
+  website: https://sites.google.com/view/imr-lab
+changdyoo:
+  first_name: Chang
+  last_name: D Yoo
+  website: https://sanctusfactory.com/family.php

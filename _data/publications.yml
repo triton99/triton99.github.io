@@ -1,0 +1,34 @@
+- id: MDSGen
+  title: "MDSGen: Fast and Efficient Masked Diffusion Temporal-Aware Transformers for Open-Domain Sound Generation"
+  venue: ICLR, 2025
+  description: "Tackle the vision-guided open-domain sound generation by using masked diffusion trainsformer"
+  project_page: "https://mdsgen.github.io/"
+  # github: VinAIResearch/GaPro
+  arxiv: 2410.02130
+  # video: "https://www.youtube.com/watch?v=uoOApyX-NUY"
+  image: mdsgen_demo1.jpg
+  # image_mouseover: isbnet_demo.jpg
+  first_authors:
+    - trungxpham
+    - triton
+  authors:
+    - changdyoo
+
+- id: DualPath
+  title: "Zero-Shot Dual-Path Integration Framework for Open-Vocabulary 3D Instance Segmentation"
+  venue: CVPR workshop, 2024
+  description: "Tackle the open-vocabulary 3D instance segmentation by using both 3D point clouds and 2D multi-view images"
+  project_page: "https://dualpath.github.io"
+  # github: VinAIResearch/GaPro
+  arxiv: 2307.13251
+  # video: "https://www.youtube.com/watch?v=uoOApyX-NUY"
+  image: dualpath_demo.jpg
+  # image_mouseover: isbnet_demo.jpg
+  first_authors:
+    - triton
+    - jiwoohong
+  authors:
+    - soohwan
+    - junyeop
+    - junyeong
+    - changdyoo
