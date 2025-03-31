@@ -8,9 +8,10 @@
   # video: "https://www.youtube.com/"
   image: ita-mdt.jpg
   # image_mouseover: _demo.jpg
-  first_authors:
-    - jiwoohong
+  # first_authors:
+  #   - jiwoohong
   authors:
+    - jiwoohong
     - triton
     - trungxpham
     - gwanhyeong
