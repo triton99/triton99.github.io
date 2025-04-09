@@ -1,3 +1,18 @@
+- id: TARO
+  title: "TARO: Timestep-Adaptive Representation Alignment with Onset-Aware Conditioning for Synchronized Video-to-Audio Synthesis"
+  venue: arXiv, 2025
+  description: "Tackle the video-guided audio synthesis by using adaptive representation alignment and onset conditioning"
+  # project_page: "https://triton99.github.io/mdsgen-site/"
+  # github: tritton/MDSGen
+  arxiv: 2504.05684
+  # video: "https://www.youtube.com/"
+  image: taro.jpg
+  # image_mouseover: _demo.jpg
+  authors:
+    - triton
+    - jiwoohong
+    - changdyoo
+
 - id: ITA-MDT
   title: "ITA-MDT: Image-Timestep-Adaptive Masked Diffusion Transformer Framework for Image-Based Virtual Try-On"
   venue: CVPR, 2025
@@ -8,8 +23,6 @@
   # video: "https://www.youtube.com/"
   image: ita-mdt.jpg
   # image_mouseover: _demo.jpg
-  # first_authors:
-  #   - jiwoohong
   authors:
     - jiwoohong
     - triton
@@ -34,11 +47,26 @@
   authors:
     - changdyoo
 
+- id: PLaTe
+  title: "Advancing Temporal Coherence in Portrait Animation via Progressive Latent Temporal Diffusion Transformers"
+  venue: arXiv, 2024
+  description: "Tackle the portrait animation by using progressive latent temporal diffusion transformers"
+  # project_page: "https://triton99.github.io/mdsgen-site/"
+  # github: tritton/MDSGen
+  # arxiv: 2410.02130
+  # video: "https://www.youtube.com/"
+  image: plate.jpg
+  # image_mouseover: _demo.jpg
+  authors:
+    - triton
+    - trungxpham
+    - changdyoo
+
 - id: DualPath
   title: "Zero-Shot Dual-Path Integration Framework for Open-Vocabulary 3D Instance Segmentation"
   venue: CVPR workshop, 2024
   description: "Tackle the open-vocabulary 3D instance segmentation by using both 3D point clouds and 2D multi-view images"
-  project_page: "https://dualpath.github.io"
+  # project_page: "https://dualpath.github.io"
   # github: tritton/MDSGen
   arxiv: 2408.08591
   # video: "https://www.youtube.com/"
