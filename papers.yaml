@@ -1,4 +1,39 @@
 papers:
+  - name: snpo
+    title:
+      name: 'Diffusion Negative Preference Optimization Made Simple'
+      link: 'https://openreview.net/forum?id=CU5EHe1KUt'
+    authors:
+      - name: Joshua Tian Jin Tee
+        href: 'https://scholar.google.com/citations?user=5D-j9JYAAAAJ&hl=en'
+      - name: Hee Suk Yoon,
+        href: 'https://hee-suk-yoon.github.io/'
+      - name: Sunjae Yoon
+        href: 'https://dbstjswo505.github.io/'
+      - me: true
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+        star: false
+    conference:
+      name: 'International Conference on Learning Representations (ICLR), 2026'
+    description: >-
+      Classifier-Free Guidance (CFG) improves diffusion sampling by encouraging conditional generations while discouraging unconditional ones. 
+      Existing preference alignment methods, however, focus only on positive preference pairs, limiting their ability to actively suppress 
+      undesirable outputs. Diffusion Negative Preference Optimization (Diff-NPO) approaches this limitation by introducing a separate negative model 
+      trained with inverted labels, allowing it to capture signals for suppressing undesirable generations. However, this design comes with two key 
+      drawbacks. First, maintaining two distinct models throughout training and inference substantially increases computational cost, making the 
+      approach less practical. Second, at inference time, Diff-NPO relies on weight merging between the positive and negative models, a process that 
+      dilutes the learned negative alignment and undermines its effectiveness. To overcome these issues, we introduce Diff-SNPO, a single-network framework 
+      that jointly learns from both positive and negative preferences. Our method employs a bounded preference objective to prevent winner-likelihood 
+      collapse, ensuring stable optimization. Diff-SNPO delivers strong alignment performance with significantly lower computational overhead, 
+      showing that explicit negative preference modeling can be simple, stable, and efficient within a unified diffusion framework.
+    links:
+      - name: openreview
+        href: 'https://openreview.net/forum?id=CU5EHe1KUt'
+    img2: false
+    nogif: true
+    highlighted: false
+################################################################################################################
   - name: taro
     title:
       name: 'TARO: Timestep-Adaptive Representation Alignment with Onset-Aware Conditioning for Synchronized Video-to-Audio Synthesis'
@@ -122,7 +157,7 @@ papers:
         href: 'https://jiwoohong93.github.io/'
         star: true
       - name: SooHwan Eom
-        href: 'https://sanctusfactory.com/family_02.php'
+        href: 'https://scholar.google.com/citations?user=i8hb2bUAAAAJ&hl=ko'
         star: false
       - name: Jun Yeop Shim
         href: 'https://sanctusfactory.com/family_02.php'
@@ -158,7 +193,7 @@ papers:
       link: 'https://ieeexplore.ieee.org/document/10537203'
     authors:
       - name: Xuan Thanh Nguyen
-        href: 'https://sanctusfactory.com/family_02.php#:~:text=Machine%20Learning-,Nguyen%20Xuan%20Thanh,-%E2%97%8B%20Email%20Address'
+        href: 'https://scholar.google.com/citations?user=mLaBO3kAAAAJ&hl=en'
       - name: Tung M. Luu
         href: 'https://tungluu94.github.io/'
       - me: true
