@@ -1,4 +1,83 @@
 papers:
+  # - name: 3dedit
+  #   title:
+  #     name: 'Training-Free 3D Editing via Feature-Divergence Localization and Trajectory Correction'
+  #   authors:
+  #     - me: true
+  #     - name: Siwoo Lim
+  #     - name: Joshua Tian Jin Tee
+  #       href: 'https://scholar.google.com/citations?user=5D-j9JYAAAAJ&hl=en'
+  #     - name: Chang D. Yoo
+  #       href: 'https://sanctusfactory.com/family.php'
+  #   conference:
+  #     name: 'Preprint, 2026'
+  #   description: >-
+  #     Training-Free 3D Editing via Feature-Divergence Localization and Trajectory Correction proposes a training-free approach
+  #     for 3D editing by localizing regions of feature divergence and correcting the generation trajectory accordingly,
+  #     enabling precise and coherent edits without additional fine-tuning.
+  #   links:
+  #     - name: preprint
+  #   img2: false
+  #   nogif: true
+  #   highlighted: true
+################################################################################################################
+  - name: iuface
+    title:
+      name: 'Expressively Controllable Talking Face Generation via Identity-Aware AU Conditioning and Neutral-Reference Debiasing'
+      link: 'https://drive.google.com/file/d/1W0VlVIEpwD6KDqkARM4LOIZC0q3CPizb/view?usp=sharing'
+    authors:
+      - me: true
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+    conference:
+      name: 'International Conference on Machine Learning F2S Workshop (ICML-W), 2026'
+    description: >-
+      Precise control over expressive dynamics in audio-driven talking face generation remains challenging due to a lack of granular control signals. 
+      Existing methods typically rely on coarse categorical emotion labels applied across an entire video, resulting in rigid, 
+      unchanging facial poses that lack temporal diversity. To address this, we propose IUFace, a framework that utilizes Action Units (AUs) as a continuous, 
+      multimodal conditioning signal for anatomically grounded, frame-level expression control. To ensure these movements translate naturally across diverse subjects, 
+      we introduce Identity-Aware AU Conditioning to personalize AU activations based on specific facial structures. 
+      Furthermore, our Neutral-Reference Debiasing paradigm explicitly decouples static identity from dynamic expression during training, 
+      effectively eliminating expression leakage and reference-pose tethering. Extensive evaluations demonstrate that IUFace achieves state-of-the-art performance in fine-grained expression alignment, 
+      temporal coherence, and reliable generation.
+    links:
+      - name: paper
+        href: 'https://drive.google.com/file/d/1W0VlVIEpwD6KDqkARM4LOIZC0q3CPizb/view?usp=sharing'
+    img2: false
+    nogif: true
+    highlighted: true
+################################################################################################################
+  - name: bfql
+    title:
+      name: 'Fast and Highly Expressive Policy Learning for Offline Reinforcement Learning via Bootstrapped Flow Q-Learning'
+      link: 'https://openreview.net/forum?id=2rGr38p5az'
+    authors:
+      - name: Thanh Xuan Nguyen
+        href: 'https://scholar.google.com/citations?user=mLaBO3kAAAAJ&hl=en'
+      - me: true
+      - name: Hongbin Choe
+      - name: Tung Minh Luu
+        href: 'https://tungluu94.github.io/'
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+    conference:
+      name: 'International Conference on Machine Learning (ICML), 2026'
+    description: >-
+      Diffusion-based Q-learning has emerged as a powerful paradigm for offline reinforcement learning, but its reliance on multi-step denoising makes both training and 
+      inference computationally expensive and brittle. Recent efforts to accelerate diffusion Q-learning toward single-step action generation typically introduce auxiliary networks, 
+      policy distillation, or multi-phase training, which frequently compromise simplicity, stability, or performance. To address these limitations, we introduce Bootstrapped Flow Q-Learning (BFQ), 
+      a novel framework that enables accurate single-step action generation during both training and inference—without auxiliary networks or distillation procedures. 
+      BFQ adopts a divide-and-conquer view of the displacement vector along the flow path: it begins by learning short-range displacements that can be accurately estimated from the Flow Matching marginal velocity, 
+      and bootstraps these components to directly learn a noise-to-action mapping in a single step. This formulation eliminates multi-step denoising, resulting in a learning procedure that is substantially faster, 
+      simpler, and more robust. Extensive D4RL evaluations show that BFQ improves performance while significantly reducing computational cost compared to multi-step diffusion baselines, 
+      demonstrating that single-step action generation suffices for high-performance offline Reinforcement Learning.
+    links:
+      - name: openreview
+        href: 'https://openreview.net/forum?id=2rGr38p5az'
+    img2: false
+    nogif: true
+    highlighted: false
+################################################################################################################
   - name: snpo
     title:
       name: 'Diffusion Negative Preference Optimization Made Simple'
@@ -169,7 +248,7 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
         star: false
     conference:
-      name: 'Conference on Computer Vision and Pattern Recognition Workshop (CVPR-W), 2024'
+      name: 'Conference on Computer Vision and Pattern Recognition OpenSUN3D Workshop (CVPR-W), 2024'
     description: >-
       This paper introduces Zero-Shot Dual-Path 
       Integration Framework that equally values the contributions of both 3D and 2D modalities. Our framework comprises three 

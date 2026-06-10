@@ -1,12 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/others/icon.png">
   <title>Tri Ton</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <meta name="description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on multimodal Generative AI, including 3D, video, and audio generation.">
+  <meta property="og:title" content="Tri Ton">
+  <meta property="og:description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on multimodal Generative AI, including 3D, video, and audio generation.">
+  <meta property="og:url" content="https://triton99.github.io">
+  <meta property="og:image" content="https://triton99.github.io/images/others/profile.jpg">
+  <meta property="og:type" content="website">
 
   <!-- Gif toggles -->
   <script>
@@ -87,7 +92,7 @@
 
 <a name="top"></a>
 <!-- body -->
-<div style="max-width:900; width:100%; margin:0 auto">
+<div style="max-width:900px; width:100%; margin:0 auto; padding:0 20px; box-sizing:border-box;">
   <!-- Intro & photo -->
   <div class="table-like" style="width:100%; text-align:left;">
     <div style="flex: 1 0 300px;margin-right:50px">
@@ -99,11 +104,11 @@
       </p>
 
       <p>
-        I am a second-year PhD student in Electrical Engineering at KAIST,
+        I am a Ph.D. candidate in Electrical Engineering at KAIST,
         advised by Prof. <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>.
         I am currently a member of <a href="https://sanctusfactory.com/u-aim/"> Artificial Intelligence & Machine
         Learning (U-AIM)</a> Lab.
-        My research interests involve Generative AI, including video, audio, and multimodal generation.
+        My research interests involve Generative AI, including 3D, video, audio, and multimodal generation.
         <br>
         <br>
         Before coming to KAIST, I received my B.Eng. in Electrical Engineering 
@@ -111,13 +116,12 @@
               href="https://scholar.google.com/citations?user=nXRpjPcAAAAJ&hl=vi">Huynh Thai Hoang</a>.
 
       </p>
-      <p align="center">
-        <a href="https://drive.google.com/file/d/1RwbUfeZrqg04vhdTi38WaQvHF0W2afI_/view">CV</a> &nbsp/&nbsp
-        <a href="https://scholar.google.com/citations?user=yqzZIBsAAAAJ=en">Google Scholar</a> &nbsp/&nbsp
-        <a href="https://github.com/triton99">GitHub</a> &nbsp/&nbsp
-        <a href="https://www.linkedin.com/in/tri-ton-0820a11a9">Linkedin</a> &nbsp/&nbsp
-        <a href="mailto:huutri99.lhp@gmail.com">Email</a>
-
+      <p align="center" class="icon-links">
+        <a href="https://drive.google.com/file/d/1RwbUfeZrqg04vhdTi38WaQvHF0W2afI_/view" title="CV"><i class="fa fa-file-text-o"></i></a> &nbsp;
+        <a href="https://scholar.google.com/citations?user=yqzZIBsAAAAJ=en" title="Google Scholar"><i class="fa fa-graduation-cap"></i></a> &nbsp;
+        <a href="https://github.com/triton99" title="GitHub"><i class="fa fa-github"></i></a> &nbsp;
+        <a href="https://www.linkedin.com/in/tri-ton-0820a11a9" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a> &nbsp;
+        <a href="mailto:huutri99.lhp@gmail.com" title="Email"><i class="fa fa-envelope-o"></i></a>
       </p>
     </div>
 
@@ -132,16 +136,38 @@
   </div>
 
   <div style="width:100%; text-align:left;margin-top:10;" class="new-list">
+    <li><strong>05/2026</strong>: Recognized as <strong>ICML 2026 Gold Reviewer</strong>.</li>
+    <li><strong>05/2026</strong>: IUFace has been accepted to ICML F2S workshop 2026.</li>
+    <li><strong>04/2026</strong>: BFQL paper has been accepted to ICML 2026.</li>
     <li><strong>01/2026</strong>: Diff-SNPO has been accepted to ICLR 2026.</li>
-    <li><strong>06/2025</strong>: TARO has been accepted to ICCV 2025.</li>
-    <li><strong>03/2025</strong>: ITA-MDT has been accepted to CVPR 2025.</li>
-    <li><strong>01/2025</strong>: MDSGen has been accepted to ICLR 2025.</li>
-    <li><strong>04/2024</strong>: DualPath has been accepted to CVPR 2024 workshop.</li>
+    <div id="extra-news" style="display:none;">
+      <li><strong>06/2025</strong>: TARO has been accepted to ICCV 2025.</li>
+      <li><strong>03/2025</strong>: ITA-MDT has been accepted to CVPR 2025.</li>
+      <li><strong>01/2025</strong>: MDSGen has been accepted to ICLR 2025.</li>
+      <li><strong>04/2024</strong>: DualPath has been accepted to CVPR OpenSUN3D workshop 2024.</li>
+    </div>
+    <a href="javascript:void(0)" id="news-toggle" onclick="
+      var el = document.getElementById('extra-news');
+      var btn = document.getElementById('news-toggle');
+      if (el.style.display === 'none') { el.style.display='block'; btn.textContent='Show less'; }
+      else { el.style.display='none'; btn.textContent='Show more'; }
+    " style="font-size:14px; color:#999;">Show more</a>
   </div>
 
   <style>
       .hiddenDesc {
           display: none;
+      }
+      .icon-links {
+          font-size: 24px;
+          margin-top: 10px;
+      }
+      .icon-links a {
+          color: #333;
+          margin: 0 5px;
+      }
+      .icon-links a:hover {
+          color: #0073e6;
       }
   </style>
   <script>
@@ -198,7 +224,7 @@
       </div>
 
       <div style="flex: 10000 1 400px;margin-bottom:10px;" valign="top">
-        <p class="paper_title" style="margin-top:0em;">{{#if title.link}}<a href={{title.link}}>{{else}}<a>{{/if}}
+        <p class="paper_title" style="margin-top:0em;">{{#if title.link}}<a href="{{title.link}}">{{else}}<a>{{/if}}
           <papertitle>{{title.name}}</papertitle>
         </a>
         <br>
@@ -219,7 +245,7 @@
         <br>
         {{#links}}
         {{#if href}}
-        <a href={{href}}>{{name}}</a>{{#unless @last}} | {{/unless}}
+        <a href="{{href}}">{{name}}</a>{{#unless @last}} | {{/unless}}
         {{else}}
         <a class="black_link">{{name}}</a>{{#unless @last}} | {{/unless}}
         {{/if}}
@@ -249,10 +275,8 @@
     <heading>Conference Reviewing</heading>
   </div>
   <div style="width:100%; text-align:left; margin-top:10;">
-    <li>CVPR (2025, 2026), ECCV (2024, 2026), ICML (2026),
-      NeurIPS (2025), ICCV (2025), 
-      ICASSP (2024, 2025, 2026).
-    </li>
+    <li>Conference: CVPR (2025–), NeurIPS (2025–), ICML (2026–), ICCV (2025–), ECCV (2024–), BMVC (2026–), ICASSP (2024–).</li>
+    <li>Journal: IEEE Transactions on Image Processing (TIP), Transactions on Machine Learning Research (TMLR).</li>
   </div>
 
   <div style="width:100%; text-align:left; margin-top:20;">
@@ -270,14 +294,12 @@
   </div>
 
 
-<!--  <br>-->
-<!--  <hr>-->
-<!--  <div style="margin:auto">-->
-<!--    <p align="center">-->
-<!--      Inspired by <a href="https://jonbarron.info/">this</strong></a> and <a-->
-<!--            href="https://www.jessezhang.net/">this</strong></a>.-->
-<!--    </p>-->
-<!--  </div>-->
+  <br>
+  <hr style="border:none; border-top:1px solid #eee; margin-top:30px;">
+  <p align="center" style="color:#aaa; font-size:13px; margin-bottom:20px;">
+    Last updated: June 2026 &nbsp;·&nbsp;
+    Inspired by <a href="https://jonbarron.info/" style="color:#aaa;">Jon Barron</a>
+  </p>
 </div>
 </body>
 
