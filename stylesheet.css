@@ -31,10 +31,12 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  /* font-family: 'Titillium Web', Verdana, Helvetica, sans-serif; */
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
   font-size: 14px;
+  line-height: 1.6;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* this fixes text size on mobile */
   /* text-size-adjust: 200%; */
   /* text-size-adjust: none; */
@@ -46,16 +48,23 @@ oral {
 }
 
 heading {
-  font-size: 22px;
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 papertitle {
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
   font-size: 14.5px;
-  font-weight: 700
+  font-weight: 700;
 }
 
 name {
-  font-size: 30px;
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 
@@ -317,7 +326,7 @@ b {
   width: 100%;
   height: 100%;
   font-size: 13px;
-  font-family: sans-serif;
+  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
   transition: all 0.4s ease-in-out;
 }
 
@@ -347,4 +356,375 @@ b {
 
 .toggle input:checked~.labels::before {
   opacity: 1;
+}
+/* ============================================================
+   Section rhythm  (old markup used unitless margin-top:20/10,
+   which browsers ignore — hence the cramped sections)
+   ============================================================ */
+.section-head {
+  width: 100%;
+  text-align: left;
+  margin-top: 44px;
+  margin-bottom: 14px;
+}
+
+.section-body {
+  width: 100%;
+  text-align: left;
+}
+
+.section-body li {
+  margin-bottom: 6px;
+}
+
+/* ============================================================
+   Publication entries — venue badge + text, no thumbnail
+   ============================================================ */
+.pub {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 0;
+  border-top: 1px solid #ececec;
+}
+
+.pub:first-of-type {
+  border-top: none;
+}
+
+/* left rail: venue badge + year */
+.pub-venue {
+  flex: 0 0 104px;
+  max-width: 104px;
+  padding-top: 1px;
+}
+
+.pub-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid #c9d4e3;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #3a6ea5;
+  white-space: nowrap;
+}
+
+.pub-year {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* right side: the entry itself */
+.pub-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pub-title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.pub-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  color: #0073e6;
+}
+
+.pub-authors {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 3px;
+}
+
+.pub-authors .me {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.pub-authors a {
+  color: #6b8fb5;
+  text-decoration: none;
+}
+
+.pub-authors a:hover {
+  color: #0073e6;
+}
+
+.pub-conf {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+}
+
+.pub-conf a {
+  color: #8fa8bf;
+  text-decoration: none;
+}
+
+.pub-conf a:hover {
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+.pub-links a,
+.pub-links .pub-link-off {
+  font-size: 13px;
+  margin-right: 14px;
+  text-decoration: none;
+}
+
+.pub-links a {
+  color: #3a6ea5;
+}
+
+.pub-links a:hover {
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+.pub-links .pub-link-off {
+  color: #c4c4c4;
+}
+
+.pub-desc-toggle {
+  color: #b0b0b0 !important;
+}
+
+/* abstract, collapsed by default */
+.pub-desc {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-left: 2px solid #ececec;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #666;
+}
+
+.pub-desc.open {
+  display: block;
+}
+
+/* stack the badge above the entry on narrow screens */
+@media only screen and (max-width: 600px) {
+  .pub {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .pub-venue {
+    flex: none;
+    max-width: none;
+    margin-bottom: 8px;
+  }
+  .pub-year {
+    display: inline;
+    margin-left: 8px;
+  }
+}
+
+/* ============================================================
+   Academic service — labelled pill rows
+   ============================================================ */
+.service-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.service-label {
+  flex: 0 0 auto;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 13.5px;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #e4e4e4;
+  border-radius: 999px;
+  background: #fafafa;
+  font-size: 12.5px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.pill b {
+  display: inline;
+  font-size: inherit;
+  padding-right: 0;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* ============================================================
+   Honors & Awards — mirrors the .pub left rail (badge + date)
+   ============================================================ */
+.award {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid #ececec;
+}
+
+.award:first-of-type {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.award-tag {
+  flex: 0 0 104px;
+  max-width: 104px;
+  padding-top: 1px;
+}
+
+.award-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  background: #fafafa;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* the competition win gets the one accent colour on the page */
+.award-badge.gold {
+  border-color: #e0cfa0;
+  background: #fdf8ec;
+  color: #a07c2c;
+  font-weight: 700;
+}
+
+.award-date {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #aaa;
+  white-space: nowrap;
+}
+
+.award-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.award-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.award-meta {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #a0a0a0;
+}
+
+.award-meta a {
+  color: #8fa8bf;
+  text-decoration: none;
+}
+
+.award-meta a:hover {
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .award { flex-direction: column; gap: 8px; }
+  .service-row { flex-direction: column; gap: 8px; }
+}
+
+/* ============================================================
+   Avatar column + availability line
+   ============================================================ */
+.avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.availability {
+  margin-top: 12px;
+  font-size: 12.5px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.availability .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #2ecc71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.18);
+  vertical-align: middle;
+}
+
+/* ============================================================
+   Back-to-top button (replaces the dark-mode widget)
+   ============================================================ */
+#to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  background: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 999;
+}
+
+#to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#to-top:hover {
+  background: #e9e9e9;
+  color: #1a1a1a;
+}
+
+@media only screen and (max-width: 600px) {
+  #to-top { right: 16px; bottom: 16px; }
 }

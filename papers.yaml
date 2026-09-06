@@ -21,6 +21,45 @@ papers:
   #   nogif: true
   #   highlighted: true
 ################################################################################################################
+  - name: pgpg
+    title:
+      name: 'Progress-Guided Preference Generation for Aligning Generative Control Policies'
+    authors:
+      - name: Tung Minh Luu
+        href: 'https://tungluu94.github.io/'
+      - me: true
+      - name: Minh Duc Nguyen
+      - name: Thanh Xuan Nguyen
+        href: 'https://scholar.google.com/citations?user=mLaBO3kAAAAJ&hl=en'
+      - name: Nguyen Gia Binh
+      - name: Quang Tan Nguyen
+      - name: Vu N. Duong
+      - name: Daniel Sonntag
+      - name: Duy Minh Ho Nguyen
+      - name: Vien Anh Ngo
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+    conference:
+      name: 'Conference on Robot Learning, 2026'
+      badge: 'CoRL'
+      year: '2026'
+    description: >-
+      Generative policies have achieved strong performance in imitation learning tasks, but their success is often constrained by the limited
+      availability of expert demonstrations. Although preference-based fine-tuning can leverage suboptimal rollouts to improve performance,
+      existing approaches heavily rely on expensive human annotations. In this work, we introduce Progress-Guided Preference Generation (PGPG),
+      an unsupervised preference alignment framework that eliminates the need for human-in-the-loop supervision. Our method leverages ordered
+      coverage alignment to measure sequential progress relative to a small set of expert demonstrations, enabling the automatic extraction of
+      pseudo-preference labels from autonomously collected rollouts. Furthermore, we introduce key enhancements to improve the reliability of
+      these progress-guided preferences, enabling effective fine-tuning of pretrained generative policies without requiring manually designed
+      reward functions. Extensive experiments across a suite of challenging long-horizon manipulation tasks demonstrate that PGPG outperforms
+      standard supervised fine-tuning baselines. Moreover, our conceptually simple framework is broadly applicable across multiple classes of
+      generative policies, demonstrating strong versatility when integrated with both diffusion and flow-matching policies.
+    links:
+      - name: openreview
+    img2: false
+    nogif: true
+    highlighted: false
+################################################################################################################
   - name: iuface
     title:
       name: 'Expressively Controllable Talking Face Generation via Identity-Aware AU Conditioning and Neutral-Reference Debiasing'
@@ -30,7 +69,9 @@ papers:
       - name: Chang D. Yoo
         href: 'https://sanctusfactory.com/family.php'
     conference:
-      name: 'International Conference on Machine Learning F2S Workshop (ICML-W), 2026'
+      name: 'International Conference on Machine Learning F2S Workshop, 2026'
+      badge: 'ICML-W'
+      year: '2026'
     description: >-
       Precise control over expressive dynamics in audio-driven talking face generation remains challenging due to a lack of granular control signals. 
       Existing methods typically rely on coarse categorical emotion labels applied across an entire video, resulting in rigid, 
@@ -61,7 +102,9 @@ papers:
       - name: Chang D. Yoo
         href: 'https://sanctusfactory.com/family.php'
     conference:
-      name: 'International Conference on Machine Learning (ICML), 2026'
+      name: 'International Conference on Machine Learning, 2026'
+      badge: 'ICML'
+      year: '2026'
     description: >-
       Diffusion-based Q-learning has emerged as a powerful paradigm for offline reinforcement learning, but its reliance on multi-step denoising makes both training and 
       inference computationally expensive and brittle. Recent efforts to accelerate diffusion Q-learning toward single-step action generation typically introduce auxiliary networks, 
@@ -94,7 +137,9 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
         star: false
     conference:
-      name: 'International Conference on Learning Representations (ICLR), 2026'
+      name: 'International Conference on Learning Representations, 2026'
+      badge: 'ICLR'
+      year: '2026'
     description: >-
       Classifier-Free Guidance (CFG) improves diffusion sampling by encouraging conditional generations while discouraging unconditional ones. 
       Existing preference alignment methods, however, focus only on positive preference pairs, limiting their ability to actively suppress 
@@ -125,7 +170,9 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
         star: false
     conference:
-      name: 'International Conference on Computer Vision (ICCV), 2025'
+      name: 'International Conference on Computer Vision, 2025<br><a href="https://gen4avc.github.io/iccv2025/">ICCV Gen4AVC Workshop</a>, 2025 (Invited Poster)<br><a href="https://avgen123.github.io/iccv25.html">ICCV AVGenL Workshop</a>, 2025 (Invited Poster)'
+      badge: 'ICCV'
+      year: '2025'
     description: >-
       This paper introduces Timestep-Adaptive Representation Alignment with Onset-Aware Conditioning (TARO), a novel 
       framework for high-fidelity and temporally coherent video-to-audio synthesis. Built upon flow-based transformers, 
@@ -166,7 +213,9 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
         star: false
     conference:
-      name: 'Conference on Computer Vision and Pattern Recognition (CVPR), 2025'
+      name: 'Conference on Computer Vision and Pattern Recognition, 2025'
+      badge: 'CVPR'
+      year: '2025'
     description: >-
       This paper introduces ITA-MDT, the Image-Timestep-Adaptive Masked Diffusion Transformer Framework for Image-Based Virtual Try-On (IVTON), 
       designed to overcome the limitations of previous approaches by leveraging the Masked Diffusion Transformer (MDT) 
@@ -207,7 +256,9 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
         star: false
     conference:
-      name: 'International Conference on Learning Representations (ICLR), 2025'
+      name: 'International Conference on Learning Representations, 2025'
+      badge: 'ICLR'
+      year: '2025'
     description: >-
       We introduce MDSGen, a novel framework for vision-guided open-domain sound generation optimized for model parameter size, 
       memory consumption, and inference speed. This framework incorporates two key innovations: (1) a redundant video feature 
@@ -248,7 +299,9 @@ papers:
         href: 'https://sanctusfactory.com/family.php'
         star: false
     conference:
-      name: 'Conference on Computer Vision and Pattern Recognition OpenSUN3D Workshop (CVPR-W), 2024'
+      name: 'Conference on Computer Vision and Pattern Recognition OpenSUN3D Workshop, 2024'
+      badge: 'CVPR-W'
+      year: '2024'
     description: >-
       This paper introduces Zero-Shot Dual-Path 
       Integration Framework that equally values the contributions of both 3D and 2D modalities. Our framework comprises three 
@@ -283,6 +336,8 @@ papers:
         star: false
     conference:
       name: 'IEEE Access, 2024 <br>IROS Policy Learning in Geometric Spaces Workshop, 2023 (<oral>Spotlight Talk</oral>)'
+      badge: 'Access'
+      year: '2024'
     description: >-
       This paper introduces an Uncertainty-Aware Rank-One Multi-Input Multi-Output (MIMO) Q Network 
       framework. The framework aims to enhance Offline Reinforcement Learning by fully leveraging the potential of OOD 

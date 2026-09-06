@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/others/icon.png">
   <title>Tri Ton</title>
-  <meta name="description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on multimodal Generative AI, including 3D, video, and audio generation.">
+  <meta name="description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on Generative AI, particularly 3D and video generation.">
   <meta property="og:title" content="Tri Ton">
-  <meta property="og:description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on multimodal Generative AI, including 3D, video, and audio generation.">
+  <meta property="og:description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on Generative AI, particularly 3D and video generation.">
   <meta property="og:url" content="https://triton99.github.io">
   <meta property="og:image" content="https://triton99.github.io/images/others/profile.jpg">
   <meta property="og:type" content="website">
@@ -61,7 +64,7 @@
   <script type="text/javascript">
       function renderHello() {
           var template = document.getElementById('template').innerHTML;
-          $.get("./papers.yaml").done(function (data) {
+          $.get("./papers.yaml?v=" + Date.now()).done(function (data) {
               try {
                   papers = jsyaml.load(data)
                   var rendered = Handlebars.compile(template)(papers);
@@ -79,16 +82,6 @@
 </head>
 
 <body>
-<!-- Dark mode -->
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
-<script>
-    var options = {
-        autoMatchOsTheme: false // default: true
-    }
-
-    const darkmode = new Darkmode(options);
-    darkmode.showWidget();
-</script>
 
 <a name="top"></a>
 <!-- body -->
@@ -99,21 +92,18 @@
       <p align="center">
         <name>Tri Ton</name>
       </p>
-      <p align="center" style="font-family:'Courier New">
+      <p align="center">
         huutri99.lhp at gmail dot com
       </p>
 
       <p>
         I am a Ph.D. candidate in Electrical Engineering at KAIST,
         advised by Prof. <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>.
-        I am currently a member of <a href="https://sanctusfactory.com/u-aim/"> Artificial Intelligence & Machine
-        Learning (U-AIM)</a> Lab.
-        My research interests involve Generative AI, including 3D, video, audio, and multimodal generation.
+        My research interests lie in Generative AI, particularly 3D and video generation.
         <br>
         <br>
         Before coming to KAIST, I received my B.Eng. in Electrical Engineering 
-        from Ho Chi Minh City University of Technology (HCMUT) in 2021, advised by Prof. <a
-              href="https://scholar.google.com/citations?user=nXRpjPcAAAAJ&hl=vi">Huynh Thai Hoang</a>.
+        from Ho Chi Minh City University of Technology (HCMUT) in 2021.
 
       </p>
       <p align="center" class="icon-links">
@@ -125,68 +115,64 @@
       </p>
     </div>
 
-    <div class="image-cropper">
-      <img src="images/others/profile.jpg" style="width:100%">
+    <div class="avatar-col">
+      <div class="image-cropper">
+        <img src="images/others/profile.jpg" style="width:100%">
+      </div>
+      <div class="availability"><span class="dot"></span>Open to collaborations &middot; internships</div>
     </div>
   </div>
 
   <!-- News -->
-  <div style="width:100%; text-align:left;">
+  <div class="section-head">
     <heading>News</heading>
   </div>
 
-  <div style="width:100%; text-align:left;margin-top:10;" class="new-list">
+  <div class="section-body new-list">
+    <li><strong>09/2026</strong>: PGPG has been accepted to <strong>CoRL</strong> 2026.</li>
+    <li><strong>09/2026</strong>: Won <strong>1st place</strong> in the PhysAI Dynamic 4D Reconstruction Challenge at <strong>ECCV</strong> 2026.</li>
     <li><strong>05/2026</strong>: Recognized as <strong>ICML 2026 Gold Reviewer</strong>.</li>
-    <li><strong>05/2026</strong>: IUFace has been accepted to ICML F2S workshop 2026.</li>
-    <li><strong>04/2026</strong>: BFQL paper has been accepted to ICML 2026.</li>
-    <li><strong>01/2026</strong>: Diff-SNPO has been accepted to ICLR 2026.</li>
+    <li><strong>05/2026</strong>: IUFace has been accepted to <strong>ICML</strong> F2S workshop 2026.</li>
+    <li><strong>04/2026</strong>: BFQL paper has been accepted to <strong>ICML</strong> 2026.</li>
+    <li><strong>01/2026</strong>: Diff-SNPO has been accepted to <strong>ICLR</strong> 2026.</li>
     <div id="extra-news" style="display:none;">
-      <li><strong>06/2025</strong>: TARO has been accepted to ICCV 2025.</li>
-      <li><strong>03/2025</strong>: ITA-MDT has been accepted to CVPR 2025.</li>
-      <li><strong>01/2025</strong>: MDSGen has been accepted to ICLR 2025.</li>
-      <li><strong>04/2024</strong>: DualPath has been accepted to CVPR OpenSUN3D workshop 2024.</li>
+      <li><strong>06/2025</strong>: TARO has been accepted to <strong>ICCV</strong> 2025.</li>
+      <li><strong>03/2025</strong>: ITA-MDT has been accepted to <strong>CVPR</strong> 2025.</li>
+      <li><strong>01/2025</strong>: MDSGen has been accepted to <strong>ICLR</strong> 2025.</li>
+      <li><strong>04/2024</strong>: DualPath has been accepted to <strong>CVPR</strong> OpenSUN3D workshop 2024.</li>
     </div>
     <a href="javascript:void(0)" id="news-toggle" onclick="
       var el = document.getElementById('extra-news');
       var btn = document.getElementById('news-toggle');
       if (el.style.display === 'none') { el.style.display='block'; btn.textContent='Show less'; }
       else { el.style.display='none'; btn.textContent='Show more'; }
-    " style="font-size:14px; color:#999;">Show more</a>
+    " style="font-size:12px; color:#999;">Show more</a>
   </div>
 
   <style>
-      .hiddenDesc {
-          display: none;
-      }
       .icon-links {
-          font-size: 24px;
-          margin-top: 10px;
+          font-size: 30px;
+          margin-top: 14px;
       }
       .icon-links a {
           color: #333;
-          margin: 0 5px;
+          margin: 0 9px;
       }
       .icon-links a:hover {
           color: #0073e6;
       }
   </style>
   <script>
-      function toggleDescription(elementId) {
-          var checkbox = document.getElementById(elementId);
-          var descriptionId = "toggleDescription" + elementId;
-          var description = document.getElementById(descriptionId);
-
-          // Check the state of the toggle and show/hide the paragraph accordingly
-          if (checkbox.checked) {
-              description.style.display = "block";  // Show the paragraph when the toggle is on
-          } else {
-              description.style.display = "none";   // Hide the paragraph when the toggle is off
-          }
+      function toggleDesc(name, el) {
+          var d = document.getElementById('desc_' + name);
+          if (!d) return;
+          var open = d.classList.toggle('open');
+          el.textContent = open ? 'hide' : 'abstract';
       }
   </script>
 
   <!-- Research -->
-  <div style="width:100%; text-align:left; margin-top:20; ">
+  <div class="section-head">
     <heading>Research</heading>
     <a style="font-size: 17px; color: black;">(</a>
     <a style="font-size:17px" id='sel_pub_button' href="javascript:pubs_off()">Highlighted</a>
@@ -194,74 +180,40 @@
     <a style="font-size:17px" id='all_pub_button' href="javascript:pubs_on()">All</a>
     <a style="font-size: 17px; color: black;">)</a>
     <br>
-    (* indicates equal contribution, <sup><span>&#8224;</span></sup> indicates equal advising)
+    (* indicates equal contribution)
   </div>
 
   <div id="mustache_target">Loading...</div>
   <script id="template" type="text/x-handlebars-template">
     {{#papers}}
-    <div style="width:100%;margin-left:0px;margin-right:0px;margin-top:10px; flex-wrap:wrap-reverse; "
-         class="table-like {{#unless highlighted}}hiddenPubs{{/unless}}"
-         onmouseout="gif_stop('{{name}}_image', '{{name}}_gif')"
-         onmouseover="gif_start('{{name}}_image', '{{name}}_gif')">
-      <div class="zero" style="flex: 1 0 270px;margin-top:0px;margin-right:20px;max-width:270px;">
-        <div class="one">
-          {{#unless nogif}}
-          <div class="two" id='{{name}}_image', style="opacity: 0">
-            <img src='images/{{name}}_after.gif' class="paper_img">
-          </div>
-          {{/unless}}
-          {{#if img2}}
-          <div class="two" id='{{name}}_image', style="opacity: 0">
-            <img src='images/{{name}}_after.png' class="paper_img">
-          </div>
-          {{/if}}
-          <img id='{{name}}_gif' src='images/{{name}}_before.png' class="paper_img">
-        </div>
-<!--        {{#unless nogif}}-->
-<!--        <p style="text-align: center;margin-top:0.4em;margin-bottom:0em;color:Gray;"><i> Hover/tap to play the gif</i></p>-->
-<!--        {{/unless}}-->
+    <div class="pub {{#unless highlighted}}hiddenPubs{{/unless}}">
+      <div class="pub-venue">
+        <span class="pub-badge">{{conference.badge}}</span>
+        <span class="pub-year">{{conference.year}}</span>
       </div>
 
-      <div style="flex: 10000 1 400px;margin-bottom:10px;" valign="top">
-        <p class="paper_title" style="margin-top:0em;">{{#if title.link}}<a href="{{title.link}}">{{else}}<a>{{/if}}
-          <papertitle>{{title.name}}</papertitle>
-        </a>
-        <br>
-        {{#authors}}
-        {{#if me}}
-        <strong>Tri Ton</strong>{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}} {{else}} {{#if href}}
-        <a class="black_link" href={{href}}>{{name}}</a>{{#if star}}*{{/if}}{{#if star2}}<sup>&#8224;</sup>
-        {{/if}}{{#unless @last}}, {{/unless}}
-        {{else}}
-        <a class="black_link">{{name}}</a>{{#if star}}*{{/if}}{{#if star2}}<sup>&#8224;</sup>{{/if}}{{#unless @last}},
-        {{/unless}}
-        {{/if}}
-        {{/if}}
-        {{/authors}}
+      <div class="pub-body">
+        <div class="pub-title">{{#if title.link}}<a href="{{title.link}}">{{title.name}}</a>{{else}}{{title.name}}{{/if}}</div>
 
-        <br>
-        <font color="Gray"><i>{{{conference.name}}}</i></font>
-        <br>
-        {{#links}}
-        {{#if href}}
-        <a href="{{href}}">{{name}}</a>{{#unless @last}} | {{/unless}}
-        {{else}}
-        <a class="black_link">{{name}}</a>{{#unless @last}} | {{/unless}}
-        {{/if}}
-        {{/links}}
-        </p>
-        <div class="toggle-container">
-          <span class="toggle-other-text">Description</span>
-          <label class="toggle">
-            <input type="checkbox" id="checkbox{{name}}" onchange="toggleDescription('checkbox{{name}}')">
-            <span class="slider"></span>
-            <span class="labels" data-on="On" data-off="Off"></span>
-          </label>
+        <div class="pub-authors">
+          {{#authors}}
+          {{#if me}}<span class="me">Tri Ton</span>{{#if star}}*{{/if}}{{#unless @last}}, {{/unless}}
+          {{else}}
+          {{#if href}}<a href="{{href}}">{{name}}</a>{{else}}<span>{{name}}</span>{{/if}}{{#if star}}*{{/if}}{{#if star2}}<sup>&#8224;</sup>{{/if}}{{#unless @last}}, {{/unless}}
+          {{/if}}
+          {{/authors}}
         </div>
-        <div id="toggleDescriptioncheckbox{{name}}" class="hiddenDesc">
-          <p style="margin-bottom:0em;">{{description}}</p>
+
+        <div class="pub-conf">{{{conference.name}}}</div>
+
+        <div class="pub-links">
+          {{#links}}
+          {{#if href}}<a href="{{href}}">{{name}}</a>{{else}}<span class="pub-link-off">{{name}}</span>{{/if}}
+          {{/links}}
+          <a class="pub-desc-toggle" href="javascript:void(0)" onclick="toggleDesc('{{name}}', this)">abstract</a>
         </div>
+
+        <div id="desc_{{name}}" class="pub-desc">{{description}}</div>
       </div>
     </div>
     {{/papers}}
@@ -271,25 +223,82 @@
   </script>
 
   <!-- Service -->
-  <div style="width:100%; text-align:left; margin-top:20;">
-    <heading>Conference Reviewing</heading>
+  <div class="section-head">
+    <heading>Honors &amp; Awards</heading>
   </div>
-  <div style="width:100%; text-align:left; margin-top:10;">
-    <li>Conference: CVPR (2025–), NeurIPS (2025–), ICML (2026–), ICCV (2025–), ECCV (2024–), BMVC (2026–), ICASSP (2024–).</li>
-    <li>Journal: IEEE Transactions on Image Processing (TIP), Transactions on Machine Learning Research (TMLR).</li>
+  <div class="section-body">
+    <div class="award">
+      <div class="award-tag">
+        <span class="award-badge gold">Challenge</span>
+        <span class="award-date">Sep 2026</span>
+      </div>
+      <div class="award-body">
+        <div class="award-title">1st Place &mdash; Dynamic Video Novel View Synthesis Track</div>
+        <div class="award-meta"><a href="https://phys-ai-workshop.github.io/eccv26/index.html">PhysAI: Understanding and Building the Physical World</a>, ECCV 2026 Workshop &middot; Team KAIST-N24</div>
+      </div>
+    </div>
+
+    <div class="award">
+      <div class="award-tag">
+        <span class="award-badge">Award</span>
+        <span class="award-date">May 2026</span>
+      </div>
+      <div class="award-body">
+        <div class="award-title">ICML 2026 Gold Reviewer</div>
+        <div class="award-meta">Top reviewer recognition with complimentary registration</div>
+      </div>
+    </div>
+
+    <div class="award">
+      <div class="award-tag">
+        <span class="award-badge">Scholarship</span>
+        <span class="award-date">2022 &ndash; 2027</span>
+      </div>
+      <div class="award-body">
+        <div class="award-title">KAIST PhD Scholarship</div>
+        <div class="award-meta">Full tuition and fees</div>
+      </div>
+    </div>
   </div>
 
-  <div style="width:100%; text-align:left; margin-top:20;">
+  <div class="section-head">
+    <heading>Academic Service</heading>
+  </div>
+  <div class="section-body">
+    <div class="service-row">
+      <span class="service-label">Conference Reviewer:</span>
+      <span class="pill-group">
+        <span class="pill"><b>CVPR</b> '25/'26</span>
+        <span class="pill"><b>NeurIPS</b> '25/'26</span>
+        <span class="pill"><b>ICML</b> '26</span>
+        <span class="pill"><b>ICCV</b> '25</span>
+        <span class="pill"><b>ECCV</b> '24/'26</span>
+        <span class="pill"><b>AAAI</b> '27</span>
+        <span class="pill"><b>BMVC</b> '26</span>
+        <span class="pill"><b>ICASSP</b> '24/'25/'26</span>
+      </span>
+    </div>
+    <div class="service-row">
+      <span class="service-label">Journal Reviewer:</span>
+      <span class="pill-group">
+        <span class="pill"><b>TIP</b> IEEE Transactions on Image Processing</span>
+        <span class="pill"><b>TMLR</b> Transactions on Machine Learning Research</span>
+        <span class="pill"><b>TCSVT</b> IEEE Transactions on Circuits and Systems for Video Technology</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="section-head">
       <heading>Teaching Assistance</heading>
   </div>
-  <div style="width:100%; text-align:left; margin-top:10;">
+  <div class="section-body">
     <li>Digital Speech Processing (EE533): 2024 Fall</li>
   </div>
 
-  <div style="width:100%; text-align:left; margin-top:20;">
+  <div class="section-head">
       <heading>Experience</heading>
   </div>
-  <div style="width:100%; text-align:left; margin-top:10;">
+  <div class="section-body">
     <li><strong>2021-2022</strong> Technology Specialist Intern at <a href="https://vinbigdata.com/en">VinBigData</a></li>
   </div>
 
@@ -297,10 +306,25 @@
   <br>
   <hr style="border:none; border-top:1px solid #eee; margin-top:30px;">
   <p align="center" style="color:#aaa; font-size:13px; margin-bottom:20px;">
-    Last updated: June 2026 &nbsp;·&nbsp;
-    Inspired by <a href="https://jonbarron.info/" style="color:#aaa;">Jon Barron</a>
+    Last updated: Sep 2026
   </p>
 </div>
+<a href="#top" id="to-top" title="Back to top" aria-label="Back to top">&#8593;</a>
+<script>
+    (function () {
+        var b = document.getElementById('to-top');
+        function sync() {
+            if (window.pageYOffset > 300) { b.classList.add('show'); }
+            else { b.classList.remove('show'); }
+        }
+        window.addEventListener('scroll', sync, { passive: true });
+        sync();
+        b.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+</script>
 </body>
 
 </html>
