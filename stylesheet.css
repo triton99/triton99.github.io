@@ -37,9 +37,9 @@ a {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* this fixes text size on mobile */
-  /* text-size-adjust: 200%; */
-  /* text-size-adjust: none; */
+  /* keep iOS from inflating text in wide blocks */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 oral {
@@ -434,6 +434,7 @@ b {
 
 .pub-title a {
   color: #1a1a1a;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -661,6 +662,30 @@ b {
 @media only screen and (max-width: 600px) {
   .award { flex-direction: column; gap: 8px; }
   .service-row { flex-direction: column; gap: 8px; }
+
+  /* in a column flex, `flex: 0 0 104px` sizes the HEIGHT — reset it */
+  .award-tag {
+    flex: none;
+    max-width: none;
+  }
+  .award-date {
+    display: inline;
+    margin-left: 8px;
+  }
+
+  /* a nowrap pill this long forces the document wider than the
+     viewport, which makes iOS zoom the whole page out */
+  .pill {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .pill-group {
+    gap: 6px;
+  }
+
+  .icon-links a {
+    margin: 0 6px;
+  }
 }
 
 /* ============================================================
@@ -727,4 +752,29 @@ b {
 
 @media only screen and (max-width: 600px) {
   #to-top { right: 16px; bottom: 16px; }
+}
+
+/* ============================================================
+   News -> Research cross-links
+   ============================================================ */
+.news-paper {
+  color: #3a6ea5;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dotted #c4d3e3;
+}
+
+.news-paper:hover {
+  color: #0073e6;
+  border-bottom-color: #0073e6;
+}
+
+/* brief cue so the jump target is obvious */
+.pub-flash {
+  animation: pubFlash 1.5s ease-out;
+}
+
+@keyframes pubFlash {
+  0%   { background: #fff8e1; }
+  100% { background: transparent; }
 }

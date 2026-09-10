@@ -97,14 +97,13 @@
       </p>
 
       <p>
-        I am a Ph.D. candidate in Electrical Engineering at KAIST,
+        I&rsquo;m a PhD student in Electrical Engineering at KAIST,
         advised by Prof. <a href="https://sanctusfactory.com/family.php">Chang D. Yoo</a>.
+        I received my bachelor&rsquo;s degree from Ho Chi Minh City University of
+        Technology - VNU.
+        <br>
+        <br>
         My research interests lie in Generative AI, particularly 3D and video generation.
-        <br>
-        <br>
-        Before coming to KAIST, I received my B.Eng. in Electrical Engineering 
-        from Ho Chi Minh City University of Technology (HCMUT) in 2021.
-
       </p>
       <p align="center" class="icon-links">
         <a href="https://drive.google.com/file/d/1RwbUfeZrqg04vhdTi38WaQvHF0W2afI_/view" title="CV"><i class="fa fa-file-text-o"></i></a> &nbsp;
@@ -129,17 +128,17 @@
   </div>
 
   <div class="section-body new-list">
-    <li><strong>09/2026</strong>: PGPG has been accepted to <strong>CoRL</strong> 2026.</li>
+    <li><strong>09/2026</strong>: <a class="news-paper" href="#paper-pgpg" onclick="gotoPaper('pgpg'); return false;">PGPG</a> has been accepted to <strong>CoRL</strong> 2026.</li>
     <li><strong>09/2026</strong>: Won <strong>1st place</strong> in the PhysAI Dynamic 4D Reconstruction Challenge at <strong>ECCV</strong> 2026.</li>
     <li><strong>05/2026</strong>: Recognized as <strong>ICML 2026 Gold Reviewer</strong>.</li>
-    <li><strong>05/2026</strong>: IUFace has been accepted to <strong>ICML</strong> F2S workshop 2026.</li>
-    <li><strong>04/2026</strong>: BFQL paper has been accepted to <strong>ICML</strong> 2026.</li>
-    <li><strong>01/2026</strong>: Diff-SNPO has been accepted to <strong>ICLR</strong> 2026.</li>
+    <li><strong>05/2026</strong>: <a class="news-paper" href="#paper-iuface" onclick="gotoPaper('iuface'); return false;">IUFace</a> has been accepted to <strong>ICML</strong> F2S workshop 2026.</li>
+    <li><strong>04/2026</strong>: <a class="news-paper" href="#paper-bfql" onclick="gotoPaper('bfql'); return false;">BFQL</a> paper has been accepted to <strong>ICML</strong> 2026.</li>
+    <li><strong>01/2026</strong>: <a class="news-paper" href="#paper-snpo" onclick="gotoPaper('snpo'); return false;">Diff-SNPO</a> has been accepted to <strong>ICLR</strong> 2026.</li>
     <div id="extra-news" style="display:none;">
-      <li><strong>06/2025</strong>: TARO has been accepted to <strong>ICCV</strong> 2025.</li>
-      <li><strong>03/2025</strong>: ITA-MDT has been accepted to <strong>CVPR</strong> 2025.</li>
-      <li><strong>01/2025</strong>: MDSGen has been accepted to <strong>ICLR</strong> 2025.</li>
-      <li><strong>04/2024</strong>: DualPath has been accepted to <strong>CVPR</strong> OpenSUN3D workshop 2024.</li>
+      <li><strong>06/2025</strong>: <a class="news-paper" href="#paper-taro" onclick="gotoPaper('taro'); return false;">TARO</a> has been accepted to <strong>ICCV</strong> 2025.</li>
+      <li><strong>03/2025</strong>: <a class="news-paper" href="#paper-ita_mdt" onclick="gotoPaper('ita_mdt'); return false;">ITA-MDT</a> has been accepted to <strong>CVPR</strong> 2025.</li>
+      <li><strong>01/2025</strong>: <a class="news-paper" href="#paper-mdsgen" onclick="gotoPaper('mdsgen'); return false;">MDSGen</a> has been accepted to <strong>ICLR</strong> 2025.</li>
+      <li><strong>04/2024</strong>: <a class="news-paper" href="#paper-dualpath" onclick="gotoPaper('dualpath'); return false;">DualPath</a> has been accepted to <strong>CVPR</strong> OpenSUN3D workshop 2024.</li>
     </div>
     <a href="javascript:void(0)" id="news-toggle" onclick="
       var el = document.getElementById('extra-news');
@@ -163,6 +162,18 @@
       }
   </style>
   <script>
+      function gotoPaper(name) {
+          // entries without `highlighted` are hidden, so switch to All first
+          pubs_on();
+          var el = document.getElementById('paper-' + name);
+          if (!el) return;
+          setTimeout(function () {
+              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              el.classList.add('pub-flash');
+              setTimeout(function () { el.classList.remove('pub-flash'); }, 1500);
+          }, 420);
+      }
+
       function toggleDesc(name, el) {
           var d = document.getElementById('desc_' + name);
           if (!d) return;
@@ -186,7 +197,7 @@
   <div id="mustache_target">Loading...</div>
   <script id="template" type="text/x-handlebars-template">
     {{#papers}}
-    <div class="pub {{#unless highlighted}}hiddenPubs{{/unless}}">
+    <div id="paper-{{name}}" class="pub {{#unless highlighted}}hiddenPubs{{/unless}}">
       <div class="pub-venue">
         <span class="pub-badge">{{conference.badge}}</span>
         <span class="pub-year">{{conference.year}}</span>
@@ -234,7 +245,7 @@
       </div>
       <div class="award-body">
         <div class="award-title">1st Place &mdash; Dynamic Video Novel View Synthesis Track</div>
-        <div class="award-meta"><a href="https://phys-ai-workshop.github.io/eccv26/index.html">PhysAI: Understanding and Building the Physical World</a>, ECCV 2026 Workshop &middot; Team KAIST-N24</div>
+        <div class="award-meta"><a href="https://phys-ai-workshop.github.io/eccv26/index.html">PhysAI: Understanding and Building the Physical World</a>, ECCV 2026 Workshop</div>
       </div>
     </div>
 
