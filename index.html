@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=7">
   <link rel="icon" type="image/png" href="images/others/icon.png">
   <title>Tri Ton</title>
   <meta name="description" content="Ph.D. candidate in Electrical Engineering at KAIST, working on Generative AI, particularly 3D and video generation.">
@@ -32,29 +32,7 @@
   <!-- Selected publications toggle -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="text/javascript">
-      function pubs_off_start() {
-          $('.hiddenPubs').hide();
-          var e = document.getElementById('sel_pub_button');
-          e.classList.add("toggled");
-          var e = document.getElementById('all_pub_button');
-          e.classList.remove("toggled");
-      }
-
-      function pubs_off() {
-          $('.hiddenPubs').slideUp();
-          var e = document.getElementById('sel_pub_button');
-          e.classList.add("toggled");
-          var e = document.getElementById('all_pub_button');
-          e.classList.remove("toggled");
-      }
-
-      function pubs_on() {
-          $('.hiddenPubs').slideDown();
-          var e = document.getElementById('all_pub_button');
-          e.classList.add("toggled");
-          var e = document.getElementById('sel_pub_button');
-          e.classList.remove("toggled");
-      };
+      // all publications are listed; featured ones are tinted via .pub-featured
   </script>
 
   <!-- Dynamic generation -->
@@ -69,7 +47,6 @@
                   papers = jsyaml.load(data)
                   var rendered = Handlebars.compile(template)(papers);
                   document.getElementById('mustache_target').innerHTML = rendered;
-                  pubs_off_start()
                   console.log("loading papers.yaml done!")
               } catch (err) {
                   console.log(err);
@@ -116,9 +93,9 @@
 
     <div class="avatar-col">
       <div class="image-cropper">
-        <img src="images/others/profile.jpg" style="width:100%">
+        <img src="images/others/profile.jpg?v=3" style="width:100%">
       </div>
-      <div class="availability"><span class="dot"></span>Open to collaborations &middot; internships</div>
+      <div class="availability"><span class="dot"></span>Open to internships &middot; collaborations</div>
     </div>
   </div>
 
@@ -128,6 +105,7 @@
   </div>
 
   <div class="section-body new-list">
+    <li><strong>09/2026</strong>: <a class="news-paper" href="#paper-focusflow" onclick="gotoPaper('focusflow'); return false;">FocusFlow</a> has been accepted to <strong>NeurIPS</strong> 2026.</li>
     <li><strong>09/2026</strong>: <a class="news-paper" href="#paper-pgpg" onclick="gotoPaper('pgpg'); return false;">PGPG</a> has been accepted to <strong>CoRL</strong> 2026.</li>
     <li><strong>09/2026</strong>: Won <strong>1st place</strong> in the PhysAI Dynamic 4D Reconstruction Challenge at <strong>ECCV</strong> 2026.</li>
     <li><strong>05/2026</strong>: Recognized as <strong>ICML 2026 Gold Reviewer</strong>.</li>
@@ -158,20 +136,16 @@
           margin: 0 9px;
       }
       .icon-links a:hover {
-          color: #0073e6;
+          color: #7a3e1f;
       }
   </style>
   <script>
       function gotoPaper(name) {
-          // entries without `highlighted` are hidden, so switch to All first
-          pubs_on();
           var el = document.getElementById('paper-' + name);
           if (!el) return;
-          setTimeout(function () {
-              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              el.classList.add('pub-flash');
-              setTimeout(function () { el.classList.remove('pub-flash'); }, 1500);
-          }, 420);
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('pub-flash');
+          setTimeout(function () { el.classList.remove('pub-flash'); }, 1500);
       }
 
       function toggleDesc(name, el) {
@@ -185,11 +159,6 @@
   <!-- Research -->
   <div class="section-head">
     <heading>Research</heading>
-    <a style="font-size: 17px; color: black;">(</a>
-    <a style="font-size:17px" id='sel_pub_button' href="javascript:pubs_off()">Highlighted</a>
-    <a style="font-size: 17px; color: black;">/</a>
-    <a style="font-size:17px" id='all_pub_button' href="javascript:pubs_on()">All</a>
-    <a style="font-size: 17px; color: black;">)</a>
     <br>
     (* indicates equal contribution)
   </div>
@@ -197,7 +166,7 @@
   <div id="mustache_target">Loading...</div>
   <script id="template" type="text/x-handlebars-template">
     {{#papers}}
-    <div id="paper-{{name}}" class="pub {{#unless highlighted}}hiddenPubs{{/unless}}">
+    <div id="paper-{{name}}" class="pub {{#if highlighted}}pub-featured{{/if}}">
       <div class="pub-venue">
         <span class="pub-badge">{{conference.badge}}</span>
         <span class="pub-year">{{conference.year}}</span>

@@ -1,6 +1,10 @@
+:root {
+  --font-main: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
 /* Color scheme stolen from https://www.seas.upenn.edu/~oleh/ */
 a {
-  color: #1772d0;
+  color: #98502a;
   text-decoration: none;
 }
 
@@ -11,7 +15,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #a723d3;
+  color: #7a3e1f;
   text-decoration: none;
 }
 
@@ -31,9 +35,9 @@ th,
 tr,
 p,
 a {
-  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 14px;
-  line-height: 1.6;
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.55;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,21 +52,21 @@ oral {
 }
 
 heading {
-  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 21px;
+  font-family: var(--font-main);
+  font-size: 22px;
   font-weight: 700;
   letter-spacing: 0;
 }
 
 papertitle {
-  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 14.5px;
+  font-family: var(--font-main);
+  font-size: 16px;
   font-weight: 700;
 }
 
 name {
-  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
-  font-size: 28px;
+  font-family: var(--font-main);
+  font-size: 34px;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -326,7 +330,7 @@ b {
   width: 100%;
   height: 100%;
   font-size: 13px;
-  font-family: 'JetBrains Mono', 'IBM Plex Mono', 'SF Mono', Menlo, Consolas, monospace;
+  font-family: var(--font-main);
   transition: all 0.4s ease-in-out;
 }
 
@@ -402,12 +406,12 @@ b {
 .pub-badge {
   display: inline-block;
   padding: 3px 8px;
-  border: 1px solid #c9d4e3;
+  border: 1px solid #e2d3c4;
   border-radius: 4px;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #3a6ea5;
+  color: #98502a;
   white-space: nowrap;
 }
 
@@ -439,7 +443,7 @@ b {
 }
 
 .pub-title a:hover {
-  color: #0073e6;
+  color: #7a3e1f;
 }
 
 .pub-authors {
@@ -455,12 +459,12 @@ b {
 }
 
 .pub-authors a {
-  color: #6b8fb5;
+  color: #9c7553;
   text-decoration: none;
 }
 
 .pub-authors a:hover {
-  color: #0073e6;
+  color: #7a3e1f;
 }
 
 .pub-conf {
@@ -471,12 +475,12 @@ b {
 }
 
 .pub-conf a {
-  color: #8fa8bf;
+  color: #9c7553;
   text-decoration: none;
 }
 
 .pub-conf a:hover {
-  color: #0073e6;
+  color: #7a3e1f;
   text-decoration: underline;
 }
 
@@ -488,11 +492,11 @@ b {
 }
 
 .pub-links a {
-  color: #3a6ea5;
+  color: #98502a;
 }
 
 .pub-links a:hover {
-  color: #0073e6;
+  color: #7a3e1f;
   text-decoration: underline;
 }
 
@@ -650,12 +654,12 @@ b {
 }
 
 .award-meta a {
-  color: #8fa8bf;
+  color: #9c7553;
   text-decoration: none;
 }
 
 .award-meta a:hover {
-  color: #0073e6;
+  color: #7a3e1f;
   text-decoration: underline;
 }
 
@@ -710,8 +714,8 @@ b {
   height: 8px;
   margin-right: 7px;
   border-radius: 50%;
-  background: #2ecc71;
-  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.18);
+  background: #7a9a4f;
+  box-shadow: 0 0 0 3px rgba(122, 154, 79, 0.20);
   vertical-align: middle;
 }
 
@@ -758,15 +762,15 @@ b {
    News -> Research cross-links
    ============================================================ */
 .news-paper {
-  color: #3a6ea5;
+  color: #98502a;
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px dotted #c4d3e3;
+  border-bottom: 1px dotted #ddc9b8;
 }
 
 .news-paper:hover {
-  color: #0073e6;
-  border-bottom-color: #0073e6;
+  color: #7a3e1f;
+  border-bottom-color: #7a3e1f;
 }
 
 /* brief cue so the jump target is obvious */
@@ -777,4 +781,102 @@ b {
 @keyframes pubFlash {
   0%   { background: #fff8e1; }
   100% { background: transparent; }
+}
+
+/* ============================================================
+   Typography: a single family (Lato), as on bingjietang718.github.io
+     body 15px/1.55 - name 34px/700 - headings 22px/700 - titles 16px/700
+   ============================================================ */
+
+/* titles: their h3 is font-serif + semibold */
+.pub-title {
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pub-title a {
+  font-family: var(--font-main);
+  font-weight: 700;
+}
+
+.award-title {
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* body copy */
+.pub-authors {
+  font-family: var(--font-main);
+  font-size: 15px;
+}
+
+.pub-conf {
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-style: italic;
+}
+
+.pub-desc {
+  font-family: var(--font-main);
+  font-size: 15px;
+}
+
+.award-meta {
+  font-family: var(--font-main);
+  font-size: 15px;
+}
+
+/* small UI: badges, link rows, pills, meta */
+.pub-links a,
+.pub-links .pub-link-off {
+  font-family: var(--font-main);
+  font-size: 13px;
+}
+
+.pub-badge,
+.pub-year,
+.award-badge,
+.award-date {
+  font-family: var(--font-main);
+}
+
+.pill {
+  font-family: var(--font-main);
+  font-size: 13px;
+}
+
+.service-label {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.availability {
+  font-family: var(--font-main);
+  font-size: 13px;
+}
+
+/* ============================================================
+   Featured publications
+   Tint is a ~4% wash of the existing accent (#98502a) so it reads
+   as the same colour family as the venue badges and links, not a
+   new hue. Negative side margins cancel the card padding, keeping
+   the badge rail aligned with untinted rows.
+   ============================================================ */
+.pub.pub-featured {
+  background: #fcf8e8;
+  border: 1px solid #ebe0bd;
+  border-radius: 8px;
+  padding: 20px 16px;
+  margin: 8px -16px;
+}
+
+@media only screen and (max-width: 600px) {
+  .pub.pub-featured {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 14px;
+  }
 }

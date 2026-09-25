@@ -1,25 +1,34 @@
 papers:
-  # - name: 3dedit
-  #   title:
-  #     name: 'Training-Free 3D Editing via Feature-Divergence Localization and Trajectory Correction'
-  #   authors:
-  #     - me: true
-  #     - name: Siwoo Lim
-  #     - name: Joshua Tian Jin Tee
-  #       href: 'https://scholar.google.com/citations?user=5D-j9JYAAAAJ&hl=en'
-  #     - name: Chang D. Yoo
-  #       href: 'https://sanctusfactory.com/family.php'
-  #   conference:
-  #     name: 'Preprint, 2026'
-  #   description: >-
-  #     Training-Free 3D Editing via Feature-Divergence Localization and Trajectory Correction proposes a training-free approach
-  #     for 3D editing by localizing regions of feature divergence and correcting the generation trajectory accordingly,
-  #     enabling precise and coherent edits without additional fine-tuning.
-  #   links:
-  #     - name: preprint
-  #   img2: false
-  #   nogif: true
-  #   highlighted: true
+  - name: focusflow
+    title:
+      name: 'Training-Free 3D Editing via Feature-Divergence Localization and Trajectory Correction'
+    authors:
+      - me: true
+      - name: Siwoo Lim
+        href: 'https://siw00-lim.github.io/'
+      - name: Joshua Tian Jin Tee
+        href: 'https://scholar.google.com/citations?user=5D-j9JYAAAAJ&hl=en'
+      - name: Chang D. Yoo
+        href: 'https://sanctusfactory.com/family.php'
+    conference:
+      name: 'Neural Information Processing Systems, 2026'
+      badge: 'NeurIPS'
+      year: '2026'
+    description: >-
+      Modifying 3D assets requires enacting targeted structural transformations while strictly preserving the geometric identity of unedited
+      regions. While recent probability flow models enable training-free editing, bounding these modifications within a high-dimensional latent
+      space presents severe mathematical challenges. Current inversion-free trajectories rely on global velocity updates, which consistently
+      result in spatial bleed into preserved structures and induce trajectory under-commitment, causing edits to stall mid-path. To resolve these
+      dual failures, we introduce FocusFlow, a segmentation-free framework that structures the integration trajectory into two disjoint phases.
+      During early coarse structure formation, FocusFlow applies Feature-Divergence Localization (FDL) to spatially gate the velocity field using
+      intrinsic cross-attention. During late-stage fine-detail refinement, Reference-Guided Generation (RGG) drives topological convergence by
+      pulling the trajectory toward an explicit clean-latent target. By providing stable, localized geometric control without manual spatial
+      annotations, this phase-scheduled approach removes significant technical barriers to the precise modification of synthetic 3D media.
+    links:
+      - name: paper
+    img2: false
+    nogif: true
+    highlighted: true
 ################################################################################################################
   - name: pgpg
     title:
@@ -58,7 +67,7 @@ papers:
       - name: openreview
     img2: false
     nogif: true
-    highlighted: false
+    highlighted: true
 ################################################################################################################
   - name: iuface
     title:
@@ -79,14 +88,13 @@ papers:
       multimodal conditioning signal for anatomically grounded, frame-level expression control. To ensure these movements translate naturally across diverse subjects, 
       we introduce Identity-Aware AU Conditioning to personalize AU activations based on specific facial structures. 
       Furthermore, our Neutral-Reference Debiasing paradigm explicitly decouples static identity from dynamic expression during training, 
-      effectively eliminating expression leakage and reference-pose tethering. Extensive evaluations demonstrate that IUFace achieves state-of-the-art performance in fine-grained expression alignment, 
-      temporal coherence, and reliable generation.
+      effectively eliminating expression leakage and reference-pose tethering. 
     links:
       - name: paper
         href: 'https://drive.google.com/file/d/1W0VlVIEpwD6KDqkARM4LOIZC0q3CPizb/view?usp=sharing'
     img2: false
     nogif: true
-    highlighted: true
+    highlighted: false
 ################################################################################################################
   - name: bfql
     title:
@@ -112,8 +120,7 @@ papers:
       a novel framework that enables accurate single-step action generation during both training and inference—without auxiliary networks or distillation procedures. 
       BFQ adopts a divide-and-conquer view of the displacement vector along the flow path: it begins by learning short-range displacements that can be accurately estimated from the Flow Matching marginal velocity, 
       and bootstraps these components to directly learn a noise-to-action mapping in a single step. This formulation eliminates multi-step denoising, resulting in a learning procedure that is substantially faster, 
-      simpler, and more robust. Extensive D4RL evaluations show that BFQ improves performance while significantly reducing computational cost compared to multi-step diffusion baselines, 
-      demonstrating that single-step action generation suffices for high-performance offline Reinforcement Learning.
+      simpler, and more robust. 
     links:
       - name: openreview
         href: 'https://openreview.net/forum?id=2rGr38p5az'
@@ -287,10 +294,9 @@ papers:
         href: 'https://jiwoohong93.github.io/'
         star: true
       - name: SooHwan Eom
-        href: 'https://scholar.google.com/citations?user=i8hb2bUAAAAJ&hl=ko'
+        href: 'https://eomsoohwan.github.io/'
         star: false
       - name: Jun Yeop Shim
-        href: 'https://sanctusfactory.com/family_02.php'
         star: false
       - name: Junyeong Kim
         href: 'https://sites.google.com/view/imr-lab/family?authuser=0'
@@ -317,7 +323,7 @@ papers:
         href: 'https://arxiv.org/abs/2408.08591'
     img2: false
     nogif: true
-    highlighted: true
+    highlighted: false
 ################################################################################################################
   - name: mimo
     title:
